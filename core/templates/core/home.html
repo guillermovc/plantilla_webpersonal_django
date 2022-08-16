@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% block title_block %}Portada{% endblock %}
+
+{% comment %} Este bloque es para tener una imagen dinámica {% endcomment %}
+{% comment %} Antes de utilizar un fichero estático necesitamos cargarlo en la memoria {% endcomment %}
+{% comment %} 
+Necesitamos ponerlo en una sola linea ya que los saltos también se pondrían en el url 
+{% endcomment %}
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
+
+{% comment %} Este bloque es para tener una cabecera y un subtitulo dinámico {% endcomment %}
+{% block headers %}
+  <h1>Juan Pérez</h1>
+  <span class="subheading">Ingeniero Industrial</span>
+{% endblock %}
